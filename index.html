@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/framework.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,55 +15,79 @@
     />
     <title>Dashboard</title>
   </head>
-  <body>
+  <body class="m-0">
     <main class="page flex">
-      <section class="sidebar bg-white p-20 relative">
-        <h3 class="relative txt-c mt-0 ">Elzero</h3>
+      <section class="sidebar shadow-ddd bg-white p-20 relative">
+        <h3 class="relative txt-c mt-0">Elzero</h3>
         <ul>
           <li>
-            <a class="active flex align-center fs-14 c-black rad-6 p-10" href="index.html">
+            <a
+              class="active flex align-center fs-14 c-black rad-6 p-10"
+              href="index.html"
+            >
               <i class="fa-solid fa-chart-bar fa-fw"></i>
               <span>Dashboard</span>
             </a>
           </li>
           <li>
-            <a class="flex align-center fs-14 c-black rad-6 p-10" href="settings.html">
+            <a
+              class="flex align-center fs-14 c-black rad-6 p-10"
+              href="settings.html"
+            >
               <i class="fa-solid fa-gear fa-fw"></i>
               <span>Settings</span>
             </a>
           </li>
           <li>
-            <a class="flex align-center fs-14 c-black rad-6 p-10" href="profile.html">
+            <a
+              class="flex align-center fs-14 c-black rad-6 p-10"
+              href="profile.html"
+            >
               <i class="fa-solid fa-user fa-fw"></i>
               <span>Profile</span>
             </a>
           </li>
           <li>
-            <a class="flex align-center fs-14 c-black rad-6 p-10" href="projects.html">
+            <a
+              class="flex align-center fs-14 c-black rad-6 p-10"
+              href="projects.html"
+            >
               <i class="fa-solid fa-diagram-project fa-fw"></i>
               <span>Projects</span>
             </a>
           </li>
           <li>
-            <a class="flex align-center fs-14 c-black rad-6 p-10" href="courses.html">
+            <a
+              class="flex align-center fs-14 c-black rad-6 p-10"
+              href="courses.html"
+            >
               <i class="fa-solid fa-graduation-cap fa-fw"></i>
               <span>Courses</span>
             </a>
           </li>
           <li>
-            <a class="flex align-center fs-14 c-black rad-6 p-10" href="friends.html">
+            <a
+              class="flex align-center fs-14 c-black rad-6 p-10"
+              href="friends.html"
+            >
               <i class="fa-solid fa-circle-user fa-fw"></i>
               <span>Friends</span>
             </a>
           </li>
           <li>
-            <a class="flex align-center fs-14 c-black rad-6 p-10" href="files.html">
+            <a
+              class="flex align-center fs-14 c-black rad-6 p-10"
+              href="files.html"
+            >
               <i class="fa-solid fa-file fa-fw"></i>
               <span>Files</span>
             </a>
           </li>
           <li>
-            <a class="flex align-center fs-14 c-black rad-6 p-10" href="plans.html">
+            <a
+              class="flex align-center fs-14 c-black rad-6 p-10"
+              href="plans.html"
+            >
               <i class="fa-solid fa-credit-card fa-fw"></i>
               <span>Plans</span>
             </a>
@@ -74,25 +98,167 @@
         <!-- Start Head -->
         <div class="head bg-white p-15 between-flex">
           <div class="search relative">
-            <input class="p-10 border-ccc rad-10" type="search" placeholder="Type A Keyword">
+            <input
+              class="p-10 border-ccc rad-10"
+              type="search"
+              placeholder="Type A Keyword"
+            />
           </div>
           <div class="icons flex align-center">
             <span class="notification relative">
               <i class="fa-regular fa-bell fa-lg"></i>
             </span>
-            <img src="images/avatar.png" alt="">
+            <img src="images/avatar.png" alt="" />
           </div>
         </div>
         <!-- End Head -->
         <h1 class="relative">Dashboard</h1>
         <!-- Start Wrapper -->
         <div class="wrapper grid gap-20 gap-10-mobile">
+          <!-- Start Welcome Widget -->
           <div class="welcome bg-white rad-10 txt-c-mobile block-mobile">
-            <h2>Welcome</h2>
+            <div class="intro p-20 flex space-between bg-eee">
+              <div>
+                <h2 class="m-0">Welcome</h2>
+                <p class="c-grey mt-5">Elzero</p>
+              </div>
+              <img class="hidden-mobile" src="images/welcome.png" alt="" />
+            </div>
+            <img src="images/avatar.png" alt="" class="avatar" />
+            <div class="body txt-c flex p-20 mt-20 mb-20 block-mobile">
+              <div>
+                Osama Elzero
+                <span class="block c-grey fs-14 mt-10">Developer</span>
+              </div>
+              <div>
+                80
+                <span class="block c-grey fs-14 mt-10">Projects</span>
+              </div>
+              <div>
+                $1_000_000
+                <span class="block c-grey fs-14 mt-10">Wealth</span>
+              </div>
+            </div>
+            <a
+              href="profile.html"
+              class="visit block fs-14 bg-blue c-white border-none w-fit btn-shape"
+              >Profile</a
+            >
           </div>
+          <!-- End Welcome Widget -->
+          <!-- Start Quick Draft Widget -->
+          <div class="quick-draft p-20 bg-white rad-10">
+            <h2 class="mt-0 mb-10">Quick Draft</h2>
+            <p class="mt-0 mb-20 c-grey fs-15">Write A Draft For Your Ideas</p>
+            <form>
+              <input
+                class="block mb-20 w-full p-10 border-none bg-eee rad-6"
+                type="text"
+                placeholder="Title"
+              />
+              <textarea
+                class="block mb-20 w-full p-10 border-none bg-eee rad-6"
+                placeholder="Your Thought"
+              ></textarea>
+              <input
+                class="save block fs-14 bg-blue pt-9 pb-9 c-white border-none w-fit btn-shape"
+                type="submit"
+                value="Save"
+              />
+            </form>
+          </div>
+          <!-- End Quick Draft Widget -->
+          <!-- Start Yearly Targets Widget -->
+          <div class="yearly-targets p-20 bg-white rad-10">
+            <h2 class="mt-0 mb-10">Yearly Targets</h2>
+            <p class="mt-0 mb-20 c-grey fs-15">Target Of The Year</p>
+            <div class="target-row mb-20 flex align-center money-blue">
+              <div class="icon center-flex">
+                <i class="fa-solid fa-dollar-sign fa-lg c-blue"></i>
+              </div>
+              <div class="details">
+                <span class="fs-14 c-grey">Money</span>
+                <span class="block mt-5 fw-bold">$20.000</span>
+                <div class="progress relative">
+                  <span class="bg-blue money-blue" style="width: 80%">
+                    <span class="bg-blue c-white rad-6 fs-12">80%</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="target-row mb-20 flex align-center project-orange">
+              <div class="icon center-flex">
+                <i class="fa-solid fa-code fa-lg c-orange"></i>
+              </div>
+              <div class="details">
+                <span class="fs-14 c-grey">Projects</span>
+                <span class="block mt-5 fw-bold">24</span>
+                <div class="progress relative">
+                  <span class="bg-orange project-orange" style="width: 55%">
+                    <span class="bg-orange c-white rad-6 fs-12">55%</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="target-row mb-20 flex align-center team-green">
+              <div class="icon center-flex">
+                <i class="fa-solid fa-user fa-lg c-green"></i>
+              </div>
+              <div class="details">
+                <span class="fs-14 c-grey">Team</span>
+                <span class="block mt-5 fw-bold">12</span>
+                <div class="progress relative">
+                  <span class="bg-green team-green" style="width: 75%">
+                    <span class="bg-green c-white rad-6 fs-12">75%</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Yearly Targets Widget -->
+          <!-- Start Tickets Widget -->
+          <div class="tickets p-20 bg-white rad-10">
+            <h2 class="mt-0 mb-10">Tickets Statistics</h2>
+            <p class="mt-0 mb-20 c-grey fs-15">
+              Everything About Support Tickets
+            </p>
+            <div class="flex txt-c gap-20 flex-wrap">
+              <div
+                class="box border-ccc w-full-mobile p-20 rad-10 fs-13 c-grey"
+              >
+                <i
+                  class="fa-regular fa-rectangle-list fa-2x mb-10 c-orange"
+                ></i>
+                <span class="block c-black fw-bold fs-25 mb-5">2500</span>
+                Total
+              </div>
+              <div
+                class="box border-ccc w-full-mobile p-20 rad-10 fs-13 c-grey"
+              >
+                <i class="fa-solid fa-spinner fa-2x mb-10 c-blue"></i>
+                <span class="block c-black fw-bold fs-25 mb-5">500</span>
+                Pending
+              </div>
+              <div
+                class="box border-ccc w-full-mobile p-20 rad-10 fs-13 c-grey"
+              >
+                <i class="fa-regular fa-circle-check fa-2x mb-10 c-green"></i>
+                <span class="block c-black fw-bold fs-25 mb-5">1900</span>
+                Closed
+              </div>
+              <div
+                class="box border-ccc w-full-mobile p-20 rad-10 fs-13 c-grey"
+              >
+                <i class="fa-regular fa-rectangle-xmark fa-2x mb-10 c-red"></i>
+                <span class="block c-black fw-bold fs-25 mb-5">100</span>
+                Deleted
+              </div>
+            </div>
+          </div>
+          <!-- End Tickets Widget -->
         </div>
         <!-- End Wrapper -->
       </section>
-    </div>
+    </main>
   </body>
 </html>

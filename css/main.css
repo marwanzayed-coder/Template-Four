@@ -9,12 +9,16 @@
 * {
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}
 body {
-  margin: 0;
   font-family: "Cairo", sans-serif;
 }
 a {
   text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 ul {
   list-style: none;
@@ -39,7 +43,6 @@ ul {
 /* Start Sidebar */
 .sidebar {
   width: 250px;
-  box-shadow: 0 0 10px #ddd;
 }
 .sidebar > h3 {
   margin-bottom: 50px;
@@ -176,3 +179,123 @@ ul {
   }
 }
 /* End Content */
+/* Start Welcome Widget */
+.welcome {
+  overflow: hidden;
+}
+.welcome .intro img {
+  width: 170px;
+  margin-bottom: -10px;
+}
+.welcome .avatar {
+  width: 64px;
+  height: 64px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  margin-top: -32px;
+  box-shadow: 0 0 5px #ddd;
+  margin-left: 20px;
+}
+.welcome .body {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.welcome .body > div {
+  flex: 1;
+}
+.welcome .visit {
+  margin: 0 15px 15px auto;
+  transition: 0.3s;
+}
+.welcome .visit:hover {
+  background-color: var(--blue-alt-color);
+}
+@media (max-width: 767px) {
+  .welcome .intro {
+    padding-bottom: 30px;
+  }
+  .welcome .avatar {
+    margin-left: 0;
+  }
+  .welcome .body > div:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+}
+/* End Welcome Widget */
+/* Start Quick Draft Widget */
+.quick-draft textarea {
+  resize: none;
+  min-height: 125px;
+}
+.quick-draft .save {
+  margin-left: auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.quick-draft .save:hover {
+  background-color: var(--blue-alt-color);
+}
+/* Start Quick Draft Widget */
+/* Start Yearly Targets Widget */
+.yearly-targets .target-row .icon {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+.yearly-targets .target-row .details {
+  flex: 1;
+}
+.yearly-targets .target-row .details .progress {
+  height: 4px;
+}
+.yearly-targets .target-row .details .progress > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.yearly-targets .target-row .details .progress > span span {
+  position: absolute;
+  bottom: 16px;
+  right: -16px;
+  padding: 2px 5px;
+}
+.yearly-targets .details .progress > span span::after {
+  content: "";
+  border-color: transparent;
+  border-width: 5px;
+  border-style: solid;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.yearly-targets .details .progress > .money-blue span::after {
+  border-top-color: var(--blue-color);
+}
+.yearly-targets .details .progress > .project-orange span::after {
+  border-top-color: var(--orange-color);
+}
+.yearly-targets .details .progress > .team-green span::after {
+  border-top-color: var(--green-color);
+}
+.money-blue .icon,
+.money-blue .progress {
+  background-color: rgb(0 117 255 / 20%);
+}
+.project-orange .icon,
+.project-orange .progress {
+  background-color: rgb(245 158 11 / 20%);
+}
+.team-green .icon,
+.team-green .progress {
+  background-color: rgb(34 197 94 / 20%);
+}
+/* End Yearly Targets Widget */
+/* Start Tickets Widget */
+.tickets .box {
+  width: calc(50% - 10px);
+}
+/* End Tickets Widget */
