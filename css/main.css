@@ -170,6 +170,7 @@ ul {
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   .page .wrapper {
@@ -299,3 +300,26 @@ ul {
   width: calc(50% - 10px);
 }
 /* End Tickets Widget */
+/* Start Latest News Widget */
+@media (max-width: 767px) {
+  .latest-news .news-row .label {
+    margin: 10px auto;
+  }
+}
+/* End Latest News Widget */
+/* Start Tasks Widget */
+.tasks .done {
+  opacity: 0.3;
+}
+.tasks .done h3,
+.tasks .done p {
+  text-decoration: line-through;
+}
+.tasks .delete {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tasks .delete:hover {
+  color: var(--red-color);
+}
+/* Start Tasks Widget */

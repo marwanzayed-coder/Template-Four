@@ -21,6 +21,11 @@
   padding: 4px 10px;
   border-radius: 6px;
 }
+.widget {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
 /* End Components */
 /* Start Box */
 .flex {
@@ -34,6 +39,9 @@
 }
 .flex-wrap {
   flex-wrap: wrap;
+}
+.grow-1 {
+  flex-grow: 1;
 }
 .grid {
   display: grid;
@@ -69,11 +77,20 @@
 .pt-9 {
   padding-top: 9px;
 }
+.pt-15 {
+  padding-top: 15px;
+}
 .pb-9 {
   padding-bottom: 9px;
 }
-.pt-9 {
-  padding-top: 9px;
+.pb-10 {
+  padding-bottom: 10px;
+}
+.pb-15 {
+  padding-bottom: 15px;
+}
+.pb-20 {
+  padding-bottom: 20px;
 }
 .m-0 {
   margin: 0;
@@ -92,6 +109,9 @@
 }
 .mt-20 {
   margin-top: 20px;
+}
+.mr-15 {
+  margin-right: 15px;
 }
 .mb-5 {
   margin-bottom: 5px;
@@ -159,6 +179,9 @@
 .fs-14 {
   font-size: 14px;
 }
+.fs-16 {
+  font-size: 16px;
+}
 .fs-15 {
   font-size: 15px;
 }
@@ -187,6 +210,9 @@
 .border-none {
   border: none;
 }
+.border-b-eee {
+  border-bottom: 1px solid #eee;
+}
 .shadow-ddd {
   box-shadow: 0 0 10px #ddd;
 }
@@ -199,9 +225,15 @@
   width: -moz-fit-content;
   width: fit-content;
 }
+.w-100 {
+  width: 100px;
+}
 @media (max-width: 767px) {
   .w-full-mobile {
     width: 100%;
+  }
+  .w-fit-mobile {
+    width: fit-content;
   }
 }
 /* End Width + Height */
