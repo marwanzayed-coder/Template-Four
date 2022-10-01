@@ -5,8 +5,11 @@
   --green-color: #22c55e;
   --red-color: #f44336;
   --grey-color: #888;
+  --fa-family: "Font Awesome 6 Free";
 }
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 *:focus {
@@ -102,7 +105,7 @@ ul {
   overflow: hidden;
 }
 .head .search::before {
-  font-family: "Font Awesome 6 Free";
+  font-family: var(--fa-family);
   content: "\f002";
   font-weight: 900;
   position: absolute;
@@ -230,6 +233,14 @@ ul {
   resize: none;
   min-height: 125px;
 }
+.quick-draft .count {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 2px 5px;
+  border-radius: 6px;
+  font-size: 12px;
+}
 .quick-draft .save {
   margin-left: auto;
   cursor: pointer;
@@ -308,6 +319,9 @@ ul {
 }
 /* End Latest News Widget */
 /* Start Tasks Widget */
+.tasks .task-row {
+  transition: 0.3s;
+}
 .tasks .done {
   opacity: 0.3;
 }
@@ -478,6 +492,212 @@ ul {
   font-size: 13px;
 }
 /* End Project Table */
+/* Start Setting */
+.setting-page {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+@media (max-width: 767px) {
+  .setting-page {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.setting-page .close-message {
+  resize: none;
+  min-height: 150px;
+}
+.setting-page .email {
+  display: inline-flex;
+  width: calc(100% - 80px);
+}
+.setting-page .sec-box a {
+  transition: 0.3s;
+}
+.setting-page .sec-box a:hover {
+  background-color: var(--blue-alt-color);
+}
+.setting-page .social-boxes i {
+  width: 40px;
+  height: 40px;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  transition: 0.3s;
+}
+.setting-page .social-boxes input {
+  height: 40px;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 0 6px 6px 0;
+}
+.setting-page .social-boxes > div:focus-within i {
+  color: black;
+}
+.widget-control .control input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.widget-control .control label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.widget-control .control label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--grey-color);
+  margin-top: -9px;
+  border-radius: 4px;
+}
+.widget-control .control label:hover::before {
+  border-color: var(--blue-alt-color);
+}
+.widget-control .control label::after {
+  font-family: var(--fa-family);
+  content: "\f00c";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  background-color: var(--blue-color);
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0) rotate(360deg);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+.widget-control .control input[type="checkbox"]:checked + label::after {
+  transform: scale(1);
+}
+.backup-control input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.backup-control .data label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.backup-control .data label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--grey-color);
+  margin-top: -11px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+}
+.backup-control .data label:hover::before {
+  border-color: var(--blue-alt-color);
+}
+.backup-control .data label::after {
+  content: "";
+  font-weight: 900;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  background-color: var(--blue-color);
+  color: white;
+  font-size: 12px;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.3s;
+  border-radius: 50%;
+}
+.backup-control .data input[type="radio"]:checked + label::after {
+  transform: scale(1);
+}
+.backup-control .data input[type="radio"]:checked + label::before {
+  border-color: var(--blue-color);
+}
+.backup-control .servers {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+@media (max-width: 767px) {
+  .backup-control .servers {
+    flex-wrap: wrap;
+  }
+}
+.backup-control .servers .server {
+  border: 2px solid #eee;
+  position: relative;
+  transition: 0.3s;
+}
+.backup-control .servers .server label {
+  cursor: pointer;
+}
+.backup-control .servers input[type="radio"]:checked + .server {
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+}
+.toggle-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+.toggle-switch {
+  background-color: #ccc;
+  width: 78px;
+  height: 32px;
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.toggle-switch::before {
+  font-family: var(--fa-family);
+  content: "\f00d";
+  font-weight: 900;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  transition: 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+  content: "\f00c";
+  left: 50px;
+  color: var(--blue-color);
+}
+.setting-page :disabled {
+  cursor: no-drop;
+  background-color: #f0f4f8;
+  color: #bbb;
+}
+/* End Setting */
 /* Start Animations */
 @keyframes change-color {
   from {

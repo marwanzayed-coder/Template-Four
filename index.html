@@ -156,10 +156,15 @@
                 type="text"
                 placeholder="Title"
               />
-              <textarea
-                class="block mb-20 w-full p-10 border-none bg-eee rad-6"
-                placeholder="Your Thought"
-              ></textarea>
+              <div class="relative">
+                <textarea
+                  class="block mb-20 w-full p-10 border-none bg-eee rad-6"
+                  maxlength="100"
+                  placeholder="Your Thought"
+                  id="textarea"
+                ></textarea>
+                <span id="count" class="count bg-white c-green">100</span>
+              </div>
               <input
                 class="save block fs-14 bg-blue pt-9 pb-9 c-white border-none w-fit btn-shape"
                 type="submit"
@@ -687,5 +692,6 @@
         <!-- End Project Table -->
       </section>
     </main>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -51,6 +51,9 @@
 .grid {
   display: grid;
 }
+.gap-5 {
+  gap: 5px;
+}
 .gap-20 {
   gap: 20px;
 }
@@ -100,11 +103,17 @@
 .pb-20 {
   padding-bottom: 20px;
 }
+.pb-25 {
+  padding-bottom: 25px;
+}
 .pl-15 {
   padding-left: 15px;
 }
 .m-0 {
   margin: 0;
+}
+.m-15 {
+  margin: 15px;
 }
 .m-20 {
   margin: 20px;
@@ -139,11 +148,17 @@
 .mb-10 {
   margin-bottom: 10px;
 }
+.mb-15 {
+  margin-bottom: 15px;
+}
 .mb-20 {
   margin-bottom: 20px;
 }
 .mb-25 {
   margin-bottom: 25px;
+}
+.mb-40 {
+  margin-bottom: 40px;
 }
 /* End Padding + Margin */
 /* Start Color */
